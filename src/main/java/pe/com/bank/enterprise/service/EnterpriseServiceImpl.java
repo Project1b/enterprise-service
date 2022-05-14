@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import lombok.AllArgsConstructor;
 import pe.com.bank.enterprise.client.PersonEnterpriseRestClient;
 import pe.com.bank.enterprise.entity.Enterprise;
-import pe.com.bank.enterprise.entity.Person;
 import pe.com.bank.enterprise.repository.EnterpriseRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

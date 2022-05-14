@@ -26,30 +26,30 @@ public class EnterpriseController {
 	    
 	    private static final Logger log = LoggerFactory.getLogger(EnterpriseController.class);
 	    
-	    @PostMapping("/enterprises")
+	    @PostMapping
 	    public Mono<Enterprise> addEnterprise(@RequestBody Enterprise enterprise){
 	    	log.info("addEnterprise");
 	    	return enterpriseService.addEnterprise(enterprise);
 	    }
 	    
-	    @GetMapping("/enterprises")
+	    @GetMapping
 	    public Flux<Enterprise> getEnterprises() {
 	    	log.info("getEnterprises");
 	        return enterpriseService.getEnterprises();
 	    }
 	    
-	    @GetMapping("/enterprises/{id}")
+	    @GetMapping("/{id}")
 	    public Mono<Enterprise> getEnterpriseId(@PathVariable String id){
 	    	log.info("getEnterpriseId");
 	    	return enterpriseService.getEnterpriseById(id);
 	    }
 	    
-	    @PutMapping("/enterprises/{id}")
+	    @PutMapping("/{id}")
 	    public Mono<Enterprise> updateEnterpris(@RequestBody Enterprise enterpriseUpdate, @PathVariable String id){
 	    	return enterpriseService.updateEnterprise(enterpriseUpdate, id);
 	    }
 	    	    
-	    @DeleteMapping("/enterprises/{id}")
+	    @DeleteMapping("/{id}")
 	    public Mono<Void> deleteEnterpriseById(@PathVariable String id){
 	    	return enterpriseService.deleteEnterpriseById(id);
 	    }
